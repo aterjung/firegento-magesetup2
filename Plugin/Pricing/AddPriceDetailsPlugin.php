@@ -77,7 +77,7 @@ class AddPriceDetailsPlugin
         }
 
         // price details are shown for each child product, not for the grouped product
-        if ($saleableItem->getTypeId() === 'grouped') {
+        if ($saleableItem->getTypeId() === 'grouped' || $saleableItem->getTypeId() === 'configurable') {
             return false;
         }
 
